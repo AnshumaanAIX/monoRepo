@@ -1,0 +1,72 @@
+{
+  "name": "FusionAIX_Components_fxPhone",
+  "label": "fxPhone",
+  "description": "Custom Phone",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxPhone",
+  "type": "Field",
+  "subtype": "Text-Phone",
+  "icon": "images/pz-phone-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Field label",
+      "format": "TEXT",
+      "required": true
+    },
+    {
+      "name": "isIcon",
+      "label": "Show/Hide icon",
+      "format": "BOOLEAN"
+    },
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "required",
+          "label": "Required",
+          "format": "REQUIRED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "disabled",
+          "label": "Disabled",
+          "format": "DISABLED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    },
+    {
+      "label": "Advanced",
+      "format": "GROUP",
+      "collapsible": true,
+      "properties": [
+        {
+          "name": "testId",
+          "label": "Test ID",
+          "format": "TEXT",
+          "ignorePattern": "[^-_\\p{N}\\p{L}]",
+          "includeAnnotations": false
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "label": "@L $this.label",
+    "datasource": {
+      "source": "@DATASOURCE D_pyCountryCallingCodeList.pxResults",
+      "fields": {
+        "value": "@P .pyCallingCode"
+      }
+    }
+  }
+}

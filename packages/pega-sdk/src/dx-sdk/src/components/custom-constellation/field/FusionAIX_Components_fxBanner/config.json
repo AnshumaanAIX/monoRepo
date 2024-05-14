@@ -1,0 +1,80 @@
+{
+  "name": "FusionAIX_Components_fxBanner",
+  "label": "Notification banner",
+  "description": "Notification banner",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxBanner",
+  "type": "Field",
+  "subtype": "Text-Paragraph",
+  "icon": "images/pz-text-area-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Field label",
+      "format": "TEXT",
+      "required": true
+    },
+    {
+      "name": "messages",
+      "label": "Messages",
+      "format": "PROPERTY"
+    },
+    {
+      "format": "SELECT",
+      "name": "variants",
+      "label": "variants",
+      "defaultValue": "none",
+      "source": [
+        {
+          "key": "none",
+          "value": "none"
+        },
+        {
+          "key": "success",
+          "value": "Success"
+        },
+        {
+          "key": "info",
+          "value": "Info"
+        },
+        {
+          "key": "warning",
+          "value": "Warning"
+        },
+        {
+          "key": "urgent",
+          "value": "Urgent"
+        }
+      ]
+    },
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "required",
+          "label": "Required",
+          "format": "REQUIRED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "disabled",
+          "label": "Disabled",
+          "format": "DISABLED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "label": "@L $this.label"
+  }
+}

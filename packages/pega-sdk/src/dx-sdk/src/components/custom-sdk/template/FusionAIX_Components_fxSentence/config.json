@@ -1,0 +1,76 @@
+{
+  "name": "FusionAIX_Components_fxSentence",
+  "label": "Mimic a sentence",
+  "description": "Mimic a sentence",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxSentence",
+  "type": "Template",
+  "subtype": "DETAILS",
+  "icon": "OneColumnDetails.svg",
+  "properties": [
+    {
+      "name": "showHighlightedData",
+      "label": "Enable highlighted fields",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "showHeader",
+      "label": "Header",
+      "format": "PROPERTY"
+    },
+    {
+      "format": "SELECT",
+      "name": "Alignment",
+      "label": "Alignment",
+      "defaultValue": "left",
+      "source": [
+        {
+          "key": "left",
+          "value": "Left"
+        },
+        {
+          "key": "right",
+          "value": "Right"
+        },
+        {
+          "key": "center",
+          "value": "Center"
+        },
+        {
+          "key": "start",
+          "value": "Start"
+        },
+        {
+          "key": "end",
+          "value": "End"
+        },
+        {
+          "key": "flex-start",
+          "value": "Flex-start"
+        },
+        {
+          "key": "flex-end",
+          "value": "Flex-End"
+        }
+      ]
+    },
+    {
+      "name": "highlightedData",
+      "label": "Highlighted fields",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields"],
+      "visibility": "$this.showHighlightedData = true",
+      "saveToConfig": true
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    }
+  ]
+}

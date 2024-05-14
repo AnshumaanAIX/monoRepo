@@ -1,0 +1,42 @@
+{
+  "name": "FusionAIX_Components_fxRDLInColumn",
+  "label": "fxRDLInColumn",
+  "description": "fxRDLInColumn",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxRDLInColumn",
+  "type": "Template",
+  "subtype": "FORM",
+  "icon": "DefaultForm.svg",
+    "properties": [
+      {
+        "name": "DataPageName",
+        "label": "Data page name",
+        "format": "TEXT"
+      },
+      {
+        "name": "isHidden",
+        "label": "Hide first row column",
+        "format": "BOOLEAN"
+      },
+      {
+        "name": "setRefresh",
+        "label": "Set refresh (Boolean)",
+        "format": "PROPERTY"
+      },
+      {
+        "name": "row",
+        "label": "Rows",
+        "format": "CONTENTPICKER",
+        "addTypeList": ["Fields"],
+        "allowCreatingGroup": true
+      },
+      {
+        "name": "visibility",
+        "label": "Visible",
+        "format": "VISIBILITY"
+      }
+  ]
+}

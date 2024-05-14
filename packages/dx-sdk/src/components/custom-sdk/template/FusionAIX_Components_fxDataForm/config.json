@@ -1,0 +1,81 @@
+{
+  "name": "FusionAIX_Components_fxDataForm",
+  "label": "fxDataForm",
+  "description": "fxDataForm",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxDataForm",
+  "type": "Template",
+  "subtype": "FORM",
+  "icon": "DefaultForm.svg",
+    "properties": [
+      {
+        "name": "header",
+        "label": "Header",
+        "format": "TEXT"
+      },
+      {
+        "name": "displayHeader",
+        "label": "Display header",
+        "format": "BOOLEAN"
+      },
+      {
+        "name": "headerStyle",
+        "label": "Header style",
+        "format": "SELECT",
+        "visibility": "$this.displayHeader = true",
+        "defaultValue": "Headline",
+        "source": [
+          { "key": "Headline", "value": "Headline" },
+          { "key": "Secondary", "value": "Secondary headline" }
+        ]
+      },
+      {
+        "name": "displayStatus",
+        "label": "Display status icon",
+        "format": "BOOLEAN"
+      },
+      {
+        "name": "displayStatusField",
+        "label": "Display status icon field",
+        "format": "PROPERTY",
+        "visibility": "$this.displayStatus = true"
+      },
+      {
+        "name": "numberOfColumns",
+        "label": "Number of columns",
+        "format": "SELECT",
+        "defaultValue": "One",
+        "source": [
+          { "key": "One", "value": "One" },
+          { "key": "Two", "value": "Two" },
+          { "key": "Three", "value": "Three" }
+        ]
+      },
+      {
+        "name": "isCollapsible",
+        "label": "Collapsible",
+        "format": "BOOLEAN"
+      },
+      {
+        "name": "defaultCollapsibleBehavior",
+        "label": "Default display",
+        "format": "SELECT",
+        "visibility": "$this.isCollapsible = true",
+        "defaultValue": "Expanded",
+        "source": [
+          { "key": "Expanded", "value": "Expanded" },
+          { "key": "Collapsed", "value": "Collapsed" }
+        ]
+      },
+      {
+        "name": "Form content",
+        "label": "Content",
+        "format": "CONTENTPICKER",
+        "addTypeList": ["Fields", "Widgets", "Views"],
+        "allowCreatingGroup": true
+      }
+  ]
+}

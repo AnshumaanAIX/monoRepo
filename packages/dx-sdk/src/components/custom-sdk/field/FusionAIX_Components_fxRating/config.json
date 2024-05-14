@@ -1,0 +1,55 @@
+{
+  "name": "FusionAIX_Components_fxRating",
+  "label": "Rating",
+  "description": "Rating",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxRating",
+  "type": "Field",
+  "subtype": "Text",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "name": "maximum1",
+      "label": "Max rating",
+      "format": "NUMBER",
+      "required": true
+    },
+
+    {
+      "name": "rate",
+      "label": "Rate value",
+      "format": "NUMBER",
+      "required": true
+    },
+    {
+      "name": "meta",
+      "label": "Meta value",
+      "format": "NUMBER",
+      "required": true
+    },
+
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {}
+}

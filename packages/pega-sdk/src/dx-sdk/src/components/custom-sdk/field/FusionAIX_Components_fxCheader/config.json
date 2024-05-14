@@ -1,0 +1,109 @@
+{
+  "name": "FusionAIX_Components_fxCheader",
+  "label": "fxCheader",
+  "description": "fxCheader",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxCheader",
+  "type": "Field",
+  "subtype": "Text",
+  "properties": [
+    {
+      "name": "value",
+      "label": "Property",
+      "format": "PROPERTY"
+    },
+    {
+      "name": "isStar",
+      "label": "Show/Hide Star icon",
+      "format": "BOOLEAN"
+    },
+    {
+      "format": "SELECT",
+      "name": "variant",
+      "label": "Variant",
+      "defaultValue": "paragraph",
+      "source": [
+        {
+          "key": "h1",
+          "value": "h1"
+        },
+        {
+          "key": "h2",
+          "value": "h2"
+        },
+        {
+          "key": "h3",
+          "value": "h3"
+        },
+        {
+          "key": "h4",
+          "value": "h4"
+        },
+        {
+          "key": "h5",
+          "value": "h5"
+        },
+        {
+          "key": "h6",
+          "value": "h6"
+        },
+        {
+          "key": "paragraph",
+          "value": "paragraph"
+        }
+      ]
+    },
+    {
+      "name": "HeadingText",
+      "label": "Show only heading text (Exclude property value)",
+      "format": "BOOLEAN"
+    },
+
+    {
+      "name": "paragraphSettings",
+      "label": "Paragraph Settings",
+      "format": "GROUP",
+      "visibility": "(variant = 'paragraph' && $this.HeadingText = true)",
+      "properties": [
+        {
+          "name": "Paratext",
+          "label": "Paragraph Text",
+          "format": "TEXT"
+        }
+      ]
+    },
+    {
+      "name": "headingSettings",
+      "label": "Heading Settings",
+      "format": "GROUP",
+      "visibility": "(!variant = 'paragraph' && $this.HeadingText = true)",
+      "properties": [
+        {
+          "name": "Paratext",
+          "label": "Heading Text",
+          "format": "TEXT"
+        }
+      ]
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {
+  }
+}

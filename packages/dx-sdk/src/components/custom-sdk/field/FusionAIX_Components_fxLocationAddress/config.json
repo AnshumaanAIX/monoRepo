@@ -1,0 +1,46 @@
+{
+  "name": "FusionAIX_Components_fxLocationAddress",
+  "label": "fxLocationAddress",
+  "description": "fxLocationAddress",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxLocationAddress",
+  "type": "Field",
+  "subtype": "Picklist",
+  "icon": "images/pz-dropdown-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "name": "address",
+      "label": "Address Property",
+      "format": "PROPERTY"
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {
+    "label": "@L $this.label",
+    "placeholder": "@L Select...",
+    "listType": "associated",
+    "datasource": "@ASSOCIATED .$this.name"
+  }
+}

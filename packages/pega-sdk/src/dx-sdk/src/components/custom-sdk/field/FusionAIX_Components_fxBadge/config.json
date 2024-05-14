@@ -1,0 +1,173 @@
+{
+  "name": "FusionAIX_Components_fxBadge",
+  "label": "Status badge",
+  "description": "Status badge",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxBadge",
+  "type": "Field",
+  "subtype": "Text-Paragraph",
+  "icon": "images/pz-text-area-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Field label",
+      "format": "TEXT",
+      "required": true
+    },
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "required",
+          "label": "Required",
+          "format": "REQUIRED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "disabled",
+          "label": "Disabled",
+          "format": "DISABLED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    },
+    {
+      "label": "Badge",
+      "name": "badgeGroup",
+      "format": "GROUP",
+      "properties": [
+        {
+          "format": "CASCADE",
+          "name": "BadgeTypeCascade",
+          "label": "BadgeTypeCascade",
+          "source": {
+            "name": "BadgeType",
+            "label": "Badge Type",
+            "format": "SELECT",
+            "defaultValue": "none",
+            "source": [
+              {
+                "key": "none",
+                "value": "none"
+              },
+              { "key": "Alert", "value": "Alert" },
+              { "key": "Count", "value": "Count" },
+              { "key": "Status", "value": "Status" },
+              { "key": "Tag", "value": "Tag" },
+              { "key": "Selectable", "value": "Selectable" }
+            ]
+          },
+          "cascadeElements": [
+            {
+              "format": "SELECT",
+              "name": "variants",
+              "label": "Variant",
+              "defaultValue": "none",
+              "match": "Alert",
+              "source": [
+                {
+                  "key": "none",
+                  "value": "none"
+                },
+                {
+                  "key": "success",
+                  "value": "Success"
+                },
+                {
+                  "key": "urgent",
+                  "value": "Urgent"
+                }
+              ]
+            },
+            {
+              "format": "SELECT",
+              "name": "variants",
+              "label": "Variants",
+              "defaultValue": "none",
+              "match": "Count",
+              "source": [
+                {
+                  "key": "none",
+                  "value": "none"
+                },
+                {
+                  "key": "default",
+                  "value": "Default"
+                },
+                {
+                  "key": "urgent",
+                  "value": "Urgent"
+                }
+              ]
+            },
+            {
+              "name": "CountNumber",
+              "label": "number",
+              "format": "PROPERTY",
+              "defaultValue": "0",
+              "match": "Count"
+            },
+
+            {
+              "format": "SELECT",
+              "name": "variants",
+              "label": "Variant",
+              "defaultValue": "none",
+              "match": "Status",
+              "source": [
+                {
+                  "key": "none",
+                  "value": "none"
+                },
+                {
+                  "key": "pending",
+                  "value": "Pending"
+                },
+                {
+                  "key": "success",
+                  "value": "Success"
+                },
+                {
+                  "key": "info",
+                  "value": "Info"
+                },
+                {
+                  "key": "urgent",
+                  "value": "Urgent"
+                },
+                {
+                  "key": "warn",
+                  "value": "Warn"
+                }
+              ]
+            },
+            {
+              "name": "TagContent",
+              "label": "Content",
+              "format": "PROPERTY",
+              "match": "Tag"
+            },
+            {
+              "name": "SelectableContent",
+              "label": "Content",
+              "format": "PROPERTY",
+              "match": "Selectable"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "label": "@L $this.label"
+  }
+}

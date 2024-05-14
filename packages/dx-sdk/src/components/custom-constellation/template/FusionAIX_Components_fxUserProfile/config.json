@@ -1,0 +1,36 @@
+{
+  "name": "FusionAIX_Components_fxUserProfile",
+  "label": "fxUserProfile",
+  "description": "User Profile",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxUserProfile",
+  "type": "Template",
+  "subtype": "PAGE",
+  "icon": "OneColumnDetails.svg",
+  "properties": [
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "B",
+      "label": "Region B",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "C",
+      "label": "Region C",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    }
+  ]
+}

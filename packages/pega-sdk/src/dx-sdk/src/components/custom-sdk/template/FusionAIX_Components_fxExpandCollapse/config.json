@@ -1,0 +1,85 @@
+{
+  "name": "FusionAIX_Components_fxExpandCollapse",
+  "label": "Expand and collapse",
+  "description": "Expand and collapse",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxExpandCollapse",
+  "type": "Template",
+  "subtype": "FORM",
+  "icon": "DefaultForm.svg",
+  "properties": [
+    {
+      "name": "test",
+      "label": "Test",
+      "format": "PROPERTY"
+    },
+    {
+      "format": "SELECT",
+      "name": "fxECDirection",
+      "label": "FxECDirection",
+      "defaultValue": "none",
+      "source": [
+        {
+          "key": "none",
+          "value": "none"
+        },
+        {
+          "key": "Vertical",
+          "value": "Vertical"
+        },
+        {
+          "key": "Horizontal",
+          "value": "Horizontal"
+        }
+      ]
+    },
+    {
+      "format": "SELECT",
+      "name": "NumCols",
+      "label": "Number of columns",
+      "defaultValue": "1",
+      "source": [
+        {
+          "key": "1",
+          "value": "One"
+        },
+        {
+          "key": "2",
+          "value": "Two"
+        },
+        {
+          "key": "3",
+          "value": "Three"
+        }
+      ]
+    },
+    {
+      "format": "SELECT",
+      "name": "templateOverrideMode",
+      "label": "Template for embedded views",
+      "defaultValue": "USE_TEMPLATE",
+      "source": [
+        {
+          "key": "USE_TEMPLATE",
+          "value": "Use template"
+        },
+        {
+          "key": "IGNORE_TEMPLATE",
+          "value": "Ignore template"
+        }
+      ]
+    },
+    {
+      "format": "INSTRUCTIONS"
+    },
+    {
+      "name": "Fields",
+      "label": "Fields",
+      "format": "CONTENTPICKER",
+      "allowCreatingGroup": true
+    }
+  ]
+}

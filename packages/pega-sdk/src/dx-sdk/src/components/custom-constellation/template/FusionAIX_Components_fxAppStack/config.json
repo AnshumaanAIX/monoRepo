@@ -1,0 +1,105 @@
+{
+  "name": "FusionAIX_Components_fxAppStack",
+  "label": "fxAppStack",
+  "description": "App Stack",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxAppStack",
+  "type": "Template",
+  "subtype": "PAGE",
+  "icon": "DefaultForm.svg",
+  "properties": [
+    {
+      "format": "SELECT",
+      "name": "NumCols",
+      "label": "Number of columns",
+      "defaultValue": "1",
+      "source": [
+        { "key": "1", "value": "One" },
+        { "key": "2", "value": "Two" },
+        { "key": "3", "value": "Three" },
+        { "key": "4", "value": "four" }
+      ]
+    },
+    {
+      "name": "header",
+      "label": "Header",
+      "format": "TEXT"
+    },
+    {
+      "name": "isIcon",
+      "label": "Show Icon",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "link",
+      "label": "Name of link property",
+      "format": "TEXT"
+    },
+    {
+      "format": "SELECT",
+      "name": "templateOverrideMode",
+      "label": "Template for embedded views",
+      "defaultValue": "USE_TEMPLATE",
+      "source": [
+        { "key": "USE_TEMPLATE", "value": "Use template" },
+        { "key": "IGNORE_TEMPLATE", "value": "Ignore template" }
+      ]
+    },
+    {
+      "label": "Button configuration",
+      "name": "Button configuration",
+      "format": "GROUP",
+      "visibility": "$this.showButton = true",
+      "properties": [
+        {
+          "name": "buttonVariant",
+          "label": "Button variant",
+          "defaultValue": "none",
+          "format": "SELECT",
+          "required": true,
+          "source": [
+            {
+              "key": "none",
+              "value": "None"
+            },
+            {
+              "key": "simple",
+              "value": "Simple"
+            },
+            {
+              "key": "primary",
+              "value": "primary"
+            },
+            {
+              "key": "secondary",
+              "value": "secondary"
+            },
+            {
+              "key": "link",
+              "value": "Link"
+            },
+            {
+              "key": "text",
+              "value": "text"
+            }
+          ]
+        },
+        {
+          "name": "buttonLabel",
+          "label": "Button Label",
+          "required": true,
+          "format": "TEXT"
+        }
+      ]
+    },
+    {
+      "name": "Fields",
+      "label": "Fields",
+      "format": "CONTENTPICKER",
+      "allowCreatingGroup": true
+    }
+  ]
+}

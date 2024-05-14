@@ -1,0 +1,30 @@
+{
+  "name": "FusionAIX_Components_fxRatingLayout",
+  "label": "Rating Layout",
+  "description": "Rating Layout",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxRatingLayout",
+  "type": "Template",
+  "subtype": "DETAILS",
+  "icon": "DefaultForm.svg",
+  "properties": [
+    {
+      "name": "minWidth",
+      "label": "Slider min width",
+      "format": "TEXT",
+      "defaultValue": "40ch"
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields"]
+    }
+  ],
+  "defaultConfig": {
+    "minWidth": "40ch"
+  }
+}

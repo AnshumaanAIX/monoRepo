@@ -1,0 +1,70 @@
+{
+  "name": "FusionAIX_Components_fxIcon",
+  "label": "Icon",
+  "description": "Icon",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxIcon",
+  "type": "Field",
+  "subtype": "Text",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "format": "SELECT",
+      "name": "fxIcon",
+      "label": "fxIcon",
+      "defaultValue": "none",
+      "source": [
+        {
+          "key":"none",
+          "value":"none"
+
+        },
+        {
+          "key": "amazon",
+          "value": "amazon"
+        },
+        {
+          "key": "react",
+          "value": "react"
+        },
+        {
+          "key": "pega",
+          "value": "pega"
+        },
+        {
+          "key": "youtube",
+          "value": "youtube"
+        },
+        {
+          "key": "google",
+          "value": "google"
+        }
+        
+      ]
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {
+  }
+}

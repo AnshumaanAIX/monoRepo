@@ -1,0 +1,91 @@
+{
+  "name": "FusionAIX_Components_fxDivider",
+  "label": "Divider",
+  "description": "Separator",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxDivider",
+  "type": "Field",
+  "subtype": "Text",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "format": "SELECT",
+      "name": "divider",
+      "label": "Divider",
+      "defaultValue": "none",
+      "source": [
+        {
+          "key": "none",
+          "value": "none"
+        },
+        {
+          "key": "solid",
+          "value": "Solid"
+        },
+        {
+          "key": "dashed",
+          "value": "Dashed"
+        }
+      ]
+    },
+    {
+      "format": "SELECT",
+      "name": "pixel",
+      "label": "Pixel",
+      "defaultValue": "none ",
+      "source": [
+        {
+          "key":"none ",
+          "value":"none "
+        },
+        {
+          "key":"1px ",
+          "value":"1px "
+        },
+        {
+          "key": "2px ",
+          "value": "2px "
+        },
+        {
+          "key": "3px ",
+          "value": "3px "
+        },
+        {
+          "key": "4px ",
+          "value": "4px "
+        },
+        {
+          "key": "5px ",
+          "value": "5px "
+        },
+        {
+          "key": "6px ",
+          "value": "6px "
+        }
+      ]
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {}
+}

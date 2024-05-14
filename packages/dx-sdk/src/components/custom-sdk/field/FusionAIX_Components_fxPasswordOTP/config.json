@@ -1,0 +1,83 @@
+{
+  "name": "FusionAIX_Components_fxPasswordOTP",
+  "label": "fxPassword&#x2F;OTP",
+  "description": "fxPassword&#x2F;OTP",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxPasswordOTP",
+  "type": "Field",
+  "subtype": "Text",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "label": "type of field",
+      "name": "passwordGroup",
+      "format": "GROUP",
+      "properties": [
+        {
+          "format": "CASCADE",
+          "name": "passwordOTPCascade",
+          "label": "passwordOTPCascade",
+          "source": {
+            "name": "fieldType",
+            "label": "OTP or Password",
+            "format": "SELECT",
+            "defaultValue": "none",
+            "source": [
+              {
+                "key": "none",
+                "value": "none"
+              },
+              {
+                "key": "Password",
+                "value": "password"
+              },
+              {
+                "key": "OTP",
+                "value": "otp"
+              }
+            ]
+          },
+          "cascadeElements": [
+            {
+              "format": "SELECT",
+              "name": "otpLength",
+              "label": "Length of OTP blocks",
+              "defaultValue": "none",
+              "match": "OTP",
+              "source": [
+                {
+                  "key": 4,
+                  "value": 4
+                },
+                {
+                  "key": 5,
+                  "value": 5
+                },
+                {
+                  "key": 6,
+                  "value": 6
+                },
+                {
+                  "key": 7,
+                  "value": 7
+                },
+                {
+                  "key": 8,
+                  "value": 8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {}
+}

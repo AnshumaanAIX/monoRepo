@@ -1,0 +1,121 @@
+{
+  "name": "FusionAIX_Components_ButtonAsURL",
+  "label": "ButtonAsURL",
+  "description": "This component will display URL as Button",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_ButtonAsURL",
+  "type": "Field",
+  "subtype": "Text-URL",
+  "icon": "images/pz-url-active.svg",
+  "properties": [
+    {
+      "name": "value",
+      "label": "Property",
+      "format": "PROPERTY"
+    },
+    {
+      "name": "link",
+      "label": "URL link",
+      "format": "PROPERTY"
+    },
+    {
+      "label": "Alignment",
+      "format": "GROUP",
+      "properties": [
+        {
+          "format": "SELECT",
+          "name": "alignment",
+          "label": "Text alignment",
+          "defaultValue": "None",
+          "source": [
+            {
+              "key": "None",
+              "value": "None"
+            },
+            {
+              "key": "center",
+              "value": "center"
+            },
+            {
+              "key": "right",
+              "value": "right"
+            },
+            {
+              "key": "left",
+              "value": "left"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Type of URL",
+      "format": "GROUP",
+      "properties": [
+        {
+          "format": "SELECT",
+          "name": "displayURL",
+          "label": "Display as",
+          "defaultValue": "None",
+          "source": [
+            {
+              "key": "None",
+              "value": "None"
+            },
+            {
+              "key": "Button",
+              "value": "Button"
+            },
+            {
+              "key": "Image",
+              "value": "Image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "required",
+          "label": "Required",
+          "format": "REQUIRED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "disabled",
+          "label": "Disabled",
+          "format": "DISABLED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    },
+    {
+      "label": "Advanced",
+      "format": "GROUP",
+      "collapsible": true,
+      "properties": [
+        {
+          "name": "testId",
+          "label": "Test ID",
+          "format": "TEXT",
+          "ignorePattern": "[^-_\\p{N}\\p{L}]",
+          "includeAnnotations": false
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "label": "@L $this.label"
+  }
+}

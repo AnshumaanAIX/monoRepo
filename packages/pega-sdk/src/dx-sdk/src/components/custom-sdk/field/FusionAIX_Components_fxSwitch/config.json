@@ -1,0 +1,48 @@
+{
+  "name": "FusionAIX_Components_fxSwitch",
+  "label": "Switch",
+  "description": "Switch",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxSwitch",
+  "type": "Field",
+  "subtype": "Boolean",
+  "icon": "images/pz-checkbox-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Field label",
+      "format": "TEXT"
+    },
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "required",
+          "label": "Required",
+          "format": "REQUIRED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "disabled",
+          "label": "Disabled",
+          "format": "DISABLED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "caption": "@L $this.label",
+    "trueLabel": "@L Yes",
+    "falseLabel": "@L No"
+  }
+}

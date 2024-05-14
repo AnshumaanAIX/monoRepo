@@ -1,0 +1,31 @@
+{
+  "name": "FusionAIX_Components_fxActionButton",
+  "label": "Actionable Button",
+  "description": "Actionable Button",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxActionButton",
+  "type": "Field",
+  "subtype": "Text",
+  "icon": "images/pz-url-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "name": "localAction",
+      "label": "Local Action ID",
+      "format": "TEXT"
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    }
+  ],
+  "defaultConfig": {}
+}

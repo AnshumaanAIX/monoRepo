@@ -1,0 +1,120 @@
+{
+  "name": "FusionAIX_Components_OpenAssignmen",
+  "label": "Open Popup",
+  "description": "Open Popup",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_OpenAssignmen",
+  "type": "Field",
+  "subtype": "Text-URL",
+  "icon": "images/pz-url-active.svg",
+  "properties": [
+   {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "name": "size",
+      "label": "Button Size",
+      "format": "SELECT",
+      "defaultValue": "s",
+      "source": [
+        { "key": "s", "value": "Small" },
+        { "key": "m", "value": "Medium" },
+        { "key": "l", "value": "Large" }
+      ]
+    },
+    {
+      "format": "SELECT",
+      "label": "variant",
+      "name": "variant",
+      "defaultValue": "secondary-outlined",
+      "source": [
+        {
+          "key": "primary-filled",
+          "value": "primary-filled"
+        },
+        {
+          "key": "primary-outlined",
+          "value": "primary-outlined"
+        },
+        {
+          "key": "secondary-filled",
+          "value": "secondary-filled"
+        },
+        {
+          "key": "secondary-outlined",
+          "value": "secondary-outlined"
+        }
+      ]
+    },
+    {
+      "name": "typeModal",
+      "label": "Type of modal",
+      "format": "SELECT",
+      "defaultValue": "none",
+      "source": [
+        { "key": "none", "value": "None" },
+        { "key": "assignment", "value": "Assignment" },
+        { "key": "localActionVal", "value": "Local action" }
+      ]
+    },
+    {
+      "name": "typeAction",
+      "label": "Type of local action",
+      "format": "SELECT",
+      "visibility": "$this.typeModal = localActionVal",
+      "defaultValue": "none",
+      "source": [
+        { "key": "none", "value": "None" },
+        { "key": "assignment", "value": "Assignment" },
+        { "key": "express", "value": "Express" },
+        { "key": "case", "value": "Case" },
+        { "key": "stage", "value": "Stage" }
+      ]
+    },
+    {
+      "name": "assignmentId",
+      "label": "Assignment id",
+      "visibility": "($this.typeModal = assignment || $this.typeAction = case || $this.typeAction = stage)",
+      "format": "PROPERTY"
+    },
+    {
+      "name": "caseID",
+      "label": "Case id",
+      "visibility": "($this.typeModal = express || $this.typeAction = case || $this.typeAction = stage)",
+      "format": "PROPERTY"
+    },
+    {
+      "name": "assignKey",
+      "label": "Assign key",
+      "visibility": "$this.typeModal = express",
+      "format": "PROPERTY"
+    },
+    {
+      "name": "modalHeader",
+      "label": "Modal header",
+      "format": "TEXT"
+    },
+    {
+      "name": "localAction",
+      "label": "Local action name",
+      "visibility": "($this.typeAction = express || $this.typeAction = assignment || $this.typeAction = case)",
+      "format":  "PROPERTY"
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    }
+  ],
+  "defaultConfig": {}
+}

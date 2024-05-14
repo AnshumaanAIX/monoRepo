@@ -1,0 +1,136 @@
+{
+  "name": "FusionAIX_Components_fxSlider",
+  "label": "Slider",
+  "description": "Slider",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxSlider",
+  "type": "Field",
+  "subtype": "Text",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+
+    {
+      "name": "helper",
+      "label": "Helper Text",
+      "format": "TEXT"
+    },
+    {
+      "name": "ticks",
+      "label": "Ticks",
+      "format": "PROPERTY"
+    },
+    {
+      "name": "defaultvalue",
+      "label": "Value",
+      "format": "NUMBER"
+    },
+    {
+      "name": "max",
+      "label": "Maximum value",
+      "format": "NUMBER",
+      "required": true
+    },
+    {
+      "name": "min",
+      "label": "Minimum value",
+      "format": "NUMBER",
+      "required": true
+    },
+    {
+      "name": "step",
+      "label": "Step",
+      "format": "NUMBER",
+      "required": true
+    },
+    {
+      "format": "SELECT",
+      "name": "orientation",
+      "label": "Orientation",
+      "defaultValue": "horizontal",
+      "source": [
+        {
+          "key": "horizontal",
+          "value": "horizontal"
+        },
+        {
+          "key": "vertical",
+          "value": "vertical"
+        }
+      ]
+    },
+
+    {
+      "format": "SELECT",
+      "name": "status",
+      "label": "Status",
+      "defaultValue": "undefined",
+      "source": [
+        {
+          "key": "none",
+          "value": "none"
+        },
+        {
+          "key": "success",
+          "value": "success"
+        },
+        {
+          "key": "warning",
+          "value": "warning"
+        },
+        {
+          "key": "error",
+          "value": "error"
+        },
+        {
+          "key": "pending",
+          "value": "pending"
+        }
+      ]
+    },
+
+    {
+      "name": "progress",
+      "label": "ShowProgress",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "input",
+      "label": "ShowInput",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "hidden",
+      "label": "LabelHidden",
+      "format": "BOOLEAN"
+    },
+
+    {
+      "name": "preview",
+      "label": "Preview",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {}
+}

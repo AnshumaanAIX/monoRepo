@@ -1,0 +1,71 @@
+{
+  "name": "FusionAIX_Components_fxCompareTableLayout",
+  "label": "Comparison Table Layout",
+  "description": "Comparison Table Layout",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxCompareTableLayout",
+  "type": "Template",
+  "subtype": "DETAILS",
+  "icon": "DefaultForm.svg",
+  "properties": [
+    {
+      "name": "heading",
+      "label": "Label",
+      "format": "TEXT"
+    },
+    {
+      "name": "displayFormat",
+      "label": "Display format",
+      "format": "SELECT",
+      "source": [
+        {
+          "key": "spreadsheet",
+          "value": "Simple table"
+        },
+        {
+          "key": "financialreport",
+          "value": "Financial report"
+        },
+        {
+          "key": "radio-button-card",
+          "value": "Radio button cards"
+        }
+      ]
+    },
+    {
+      "name": "currencyFormat",
+      "label": "Currency format",
+      "format": "SELECT",
+      "source": [
+        {
+          "key": "standard",
+          "value": "standard"
+        },
+        {
+          "key": "compact",
+          "value": "compact"
+        },
+        {
+          "key": "parentheses",
+          "value": "parentheses"
+        }
+      ]
+    },
+    {
+      "key": "selectionProperty",
+      "format": "PROPERTY",
+      "name": "selectionProperty",
+      "label": "Selection Property"
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "FusionAIX_Components_fxCardV1",
+  "label": "fxCard",
+  "description": "fxCard",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxCardV1",
+  "type": "Template",
+  "subtype": "FORM",
+  "icon": "OneColumnPage.svg",
+  "properties": [
+    {
+      "name": "useConfigurableLayout",
+      "label": "Use inline layout for insights",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "enableGetNextWork",
+      "label": "Enable Get next work",
+      "format": "BOOLEAN"
+    },
+    {
+      "name":"showView",
+      "label":"Show view",
+      "format":"BOOLEAN"
+    },
+    {
+      "name":"editView",
+      "label":"Edit View",
+      "format":"BOOLEAN"
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList":  ["Fields", "Views"]
+    }
+  ],
+  "defaultConfig": {}
+}

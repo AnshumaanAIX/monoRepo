@@ -1,0 +1,37 @@
+{
+  "name": "FusionAIX_Extensions_fxTableWithPagination",
+  "label": "fxTableWithPagination",
+  "description": "fxTableWithPagination",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Extensions",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Extensions_fxTableWithPagination",
+  "type": "Template",
+  "subtype": "PAGE",
+  "icon": "OneColumnPage.svg",
+  "properties": [
+    {
+      "name": "useConfigurableLayout",
+      "label": "Use inline layout for insights",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "enableGetNextWork",
+      "label": "Enable Get next work",
+      "format": "BOOLEAN"
+    },
+    {
+      "name":"pageSize",
+      "label":"Limit records per page",
+      "format":"NUMBER"
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList":  ["Fields", "Views"]
+    }
+  ],
+  "defaultConfig": {}
+}

@@ -1,0 +1,76 @@
+{
+  "name": "FusionAIX_Components_fxDPageButton",
+  "label": "D_Page Button",
+  "description": "D_Page Button",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxDPageButton",
+  "type": "Field",
+  "subtype": "Text",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "label": "typeButton",
+      "name": "typeButton",
+      "format": "GROUP",
+      "properties": [
+        {
+          "format": "CASCADE",
+          "name": "buttonCascade",
+          "label": "buttonCascade",
+          "source": {
+            "name": "buttonType",
+            "label": "type of Button",
+            "format": "SELECT",
+            "defaultValue": "none",
+            "source": [
+              {
+                "key": "none",
+                "value": "none"
+              },
+              {
+                "key": "d_page",
+                "value": "d_page"
+              },
+              {
+                "key": "option2",
+                "value": "option2"
+              }
+            ]
+          },
+          "cascadeElements": [
+            {
+              "format": "TEXT",
+              "name": "dataPage",
+              "label": "Data Page name",
+              "match": "d_page"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {}
+}

@@ -1,0 +1,255 @@
+{
+  "name": "FusionAIX_Components_fxLinkHover",
+  "label": "fxLinkHover",
+  "description": "fxLinkHover",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxLinkHover",
+  "type": "Field",
+  "subtype": "Text-URL",
+  "icon": "images/pz-text-input-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Field label",
+      "format": "TEXT",
+      "required": true
+    },
+    {
+      "format": "SELECT",
+      "name": "source",
+      "label": "source",
+      "defaultValue": "none",
+      "source": [
+        {
+          "key": "none",
+          "value": "none"
+        },
+        {
+          "key": "Dpage",
+          "value": "Dpage"
+        },
+        {
+          "key": "ActionBTN",
+          "value": "ActionBTN"
+        }
+      ]
+    },
+    {
+      "name": "dPage",
+      "label": "Data page name",
+      "format": "TEXT",
+      "visibility": "$this.source = Dpage"
+    },
+    {
+      "name": "bLabel",
+      "label": "Button label",
+      "format": "TEXT"
+    },
+    {
+      "name": "bValue",
+      "label": "Button value",
+      "format": "PROPERTY",
+      "visibility": "$this.source = ActionBTN"
+    },
+    {
+      "name": "isParameter",
+      "label": "Parameters for Dpage",
+      "format": "BOOLEAN",
+      "visibility": "$this.source = Dpage"
+    },
+    {
+      "name": "numberOfparameters",
+      "label": "Number of Parameters",
+      "visibility": "$this.isParameter = true",
+      "format": "SELECT",
+      "defaultValue": "One",
+      "source": [
+        { "key": "One", "value": "One" },
+        { "key": "Two", "value": "Two" },
+        { "key": "Three", "value": "Three" }
+      ]
+    },
+    {
+      "name": "parameter1",
+      "label": "Parameter 1",
+      "format": "GROUP",
+      "visibility": "$this.numberOfparameters = One",
+      "properties": [
+        {
+          "name": "paramslabel1",
+          "label": "Parameter Label 1",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue1",
+          "label": "Parameter Value 1",
+          "format": "PROPERTY"
+        }
+      ]
+    },
+    {
+      "name": "parameter2",
+      "label": "Parameter 2",
+      "format": "GROUP",
+      "visibility": "$this.numberOfparameters = Two",
+      "properties": [
+        {
+          "name": "paramslabel1",
+          "label": "Parameter Label 1",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue1",
+          "label": "Parameter Value 1",
+          "format": "PROPERTY"
+        },
+        {
+          "name": "paramslabel2",
+          "label": "Parameter Label 2",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue2",
+          "label": "Parameter Value 2",
+          "format": "PROPERTY"
+        }
+      ]
+    },
+    {
+      "name": "parameter3",
+      "label": "Parameter 3",
+      "format": "GROUP",
+      "visibility": "$this.numberOfparameters = Three",
+      "properties": [
+        {
+          "name": "paramslabel1",
+          "label": "Parameter Label 1",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue1",
+          "label": "Parameter Value 1",
+          "format": "PROPERTY"
+        },
+        {
+          "name": "paramslabel2",
+          "label": "Parameter Label 2",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue2",
+          "label": "Parameter Value 2",
+          "format": "PROPERTY"
+        },
+        {
+          "name": "paramslabel3",
+          "label": "Parameter Label 3",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue3",
+          "label": "Parameter Value 3",
+          "format": "PROPERTY"
+        }
+      ]
+    },
+    {
+      "name": "PropertyVal",
+      "label": "Property value to fetch data",
+      "format": "TEXT"
+    },
+    {
+      "name": "readOnly",
+      "label": "Edit mode",
+      "format": "READONLY"
+    },
+    {
+      "label": "Column settings",
+      "format": "GROUP",
+      "visibility": "@VIEWTYPE == 'MultiRecordDisplayAsTable'",
+      "properties": [
+        {
+          "name": "columnWidth",
+          "label": "Column width",
+          "format": "SELECT",
+          "source": [
+            {
+              "key": "auto",
+              "value": "Auto"
+            },
+            {
+              "key": "custom",
+              "value": "Custom"
+            }
+          ]
+        },
+        {
+          "name": "width",
+          "label": "Width (px)",
+          "format": "NUMBER",
+          "visibility": "$this.columnWidth == 'custom'"
+        }
+      ]
+    },
+    {
+      "label": "Input settings",
+      "format": "GROUP",
+      "visibility": "(!readOnly = true)",
+      "properties": [
+        {
+          "name": "placeholder",
+          "label": "Placeholder",
+          "format": "TEXT"
+        },
+        {
+          "name": "helperText",
+          "label": "Helper text",
+          "format": "TEXT"
+        }
+      ]
+    },
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "required",
+          "label": "Required",
+          "format": "REQUIRED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "disabled",
+          "label": "Disabled",
+          "format": "DISABLED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    },
+    {
+      "label": "Advanced",
+      "format": "GROUP",
+      "collapsible": true,
+      "properties": [
+        {
+          "name": "testId",
+          "label": "Test ID",
+          "format": "TEXT",
+          "ignorePattern": "[^-_\\p{N}\\p{L}]",
+          "includeAnnotations": false
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "label": "@L $this.label"
+  }
+}

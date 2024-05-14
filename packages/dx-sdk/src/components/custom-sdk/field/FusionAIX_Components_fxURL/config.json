@@ -1,0 +1,60 @@
+{
+  "name": "FusionAIX_Components_fxURL",
+  "label": "URL as caption",
+  "description": "URL as caption",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxURL",
+  "type": "Field",
+  "subtype": "Text-URL",
+  "icon": "images/pz-url-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Link label",
+      "format": "TEXT",
+      "required": true
+    },
+    {
+      "name": "newlink",
+      "label": "Link value",
+      "format": "TEXT",
+      "required": true
+    },
+    {
+      "name": "time",
+      "label": "Refresh Screen With Delay(in 's')",
+      "format": "NUMBER",
+      "defaultValue": "0"
+    },
+
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "required",
+          "label": "Required",
+          "format": "REQUIRED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "disabled",
+          "label": "Disabled",
+          "format": "DISABLED",
+          "visibility": "(!readOnly = true)"
+        },
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "label": "@L $this.label"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "name": "FusionAIX_Components_fxSummaryList",
+  "label": "Summary list",
+  "description": "Summary list",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxSummaryList",
+  "type": "Widget",
+  "subtype": ["PAGE", "CASE"],
+  "icon": "OneColumnPage.svg",
+  "properties": [
+    {
+      "name": "title",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "name": "showName",
+      "label": "Name",
+      "format": "TEXT"
+    },
+    {
+      "name": "noitemtext",
+      "label": "NoItemText",
+      "format": "TEXT"
+    },
+    {
+      "format": "SELECT",
+      "name": "icon",
+      "label": "Icon",
+      "defaultValue": "none",
+      "source": [
+        {
+          "key": "none",
+          "value": "none"
+        },
+        {
+          "key": "users-solid",
+          "value": "users-solid"
+        },
+        {
+          "key": "users",
+          "value": "users"
+        },
+        {
+          "key": "user-list-solid",
+          "value": "user-list-solid"
+        },
+        {
+          "key": "user-list",
+          "value": "user-list"
+        }
+      ]
+    },
+    {
+      "name": "countValue",
+      "label": "Count",
+      "format": "NUMBER"
+    },
+    {
+      "name": "loadingaction",
+      "label": "Loading",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "secondary",
+      "label": "ShowSecondary",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "visual",
+      "label": "ShowVisual",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "action",
+      "label": "ShowAction",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "noitems",
+      "label": "NoItems",
+      "format": "BOOLEAN"
+    },
+
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "label": "Create operator",
+    "title": "Create operator",
+    "createLabel": "@L Created",
+    "updateLabel": "@L Updated",
+    "createOperator": "@USER .pxCreateOperator",
+    "updateOperator": "@USER .pxUpdateOperator",
+    "createDateTime": "@P .pxCreateDateTime",
+    "updateDateTime": "@P .pxUpdateDateTime",
+    "resolveLabel": "@L Resolved",
+    "resolveOperator": "@USER .pyResolvedUserID",
+    "resolveDateTime": "@P .pyResolvedTimestamp"
+  }
+}

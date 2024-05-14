@@ -1,0 +1,38 @@
+{
+  "name": "FusionAIX_Components_fxFormFullWidth",
+  "label": "Form Full Width",
+  "description": "Form Full Width",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxFormFullWidth",
+  "type": "Template",
+  "subtype": "FORM",
+  "icon": "DefaultForm.svg",
+  "properties": [
+    {
+      "name": "heading",
+      "label": "Label",
+      "format": "TEXT"
+    },
+    {
+      "format": "SELECT",
+      "name": "NumCols",
+      "label": "Number of columns",
+      "defaultValue": "1",
+      "source": [
+        { "key": "1", "value": "One" },
+        { "key": "2", "value": "Two" },
+        { "key": "3", "value": "Three" }
+      ]
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    }
+  ]
+}

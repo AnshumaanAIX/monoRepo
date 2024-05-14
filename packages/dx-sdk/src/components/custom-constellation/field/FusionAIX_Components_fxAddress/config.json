@@ -1,0 +1,46 @@
+{
+  "name": "FusionAIX_Components_fxAddress",
+  "label": "fxAddress",
+  "description": "Custom Address",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxAddress",
+  "type": "Field",
+  "subtype": "Text",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "name": "isIcon",
+      "label": "Show/Hide icon",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "isCity",
+      "label": "Show/Hide City Only",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {
+  }
+}

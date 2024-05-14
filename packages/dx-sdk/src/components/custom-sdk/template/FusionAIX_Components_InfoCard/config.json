@@ -1,0 +1,27 @@
+{
+  "name": "FusionAIX_Components_InfoCard",
+  "label": "InfoCard",
+  "description": "",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_InfoCard",
+  "type": "Template",
+  "subtype": "DATAVIEW",
+  "icon": "TwoColumn.svg",
+  "properties": [
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "B",
+      "label": "Region B",
+      "format": "CONTENTPICKER",
+      "allowCreatingGroup": true
+    }
+  ]
+}

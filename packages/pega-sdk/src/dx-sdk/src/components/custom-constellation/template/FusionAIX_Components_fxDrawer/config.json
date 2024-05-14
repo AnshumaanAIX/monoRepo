@@ -1,0 +1,99 @@
+{
+  "name": "FusionAIX_Components_fxDrawer",
+  "label": "Drawer",
+  "description": "Drawer",
+  "organization": "FusionAIX",
+  "version": "0.0.2",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxDrawer",
+  "type": "Template",
+  "subtype": "FORM",
+  "icon": "DefaultForm.svg",
+  "properties": [
+    {
+      "format": "SELECT",
+      "name": "NumCols",
+      "label": "Number of columns",
+      "defaultValue": "1",
+      "source": [
+        { "key": "1", "value": "One" },
+        { "key": "2", "value": "Two" },
+        { "key": "3", "value": "Three" }
+      ]
+    },
+    {
+      "format": "SELECT",
+      "name": "templateOverrideMode",
+      "label": "Template for embedded views",
+      "defaultValue": "USE_TEMPLATE",
+      "source": [
+        { "key": "USE_TEMPLATE", "value": "Use template" },
+        { "key": "IGNORE_TEMPLATE", "value": "Ignore template" }
+      ]
+    },
+    {
+      "format": "INSTRUCTIONS"
+    },
+    {
+      "format": "SELECT",
+      "name": "placementType",
+      "label": "Placement",
+      "defaultValue": "none",
+      "source": [
+        {
+          "key": "none",
+          "value": "none"
+        },
+        {
+          "key": "left",
+          "value": "Left"
+        },
+        {
+          "key": "top",
+          "value": "Top"
+        },
+        {
+          "key": "bottom",
+          "value": "Bottom"
+        },
+        {
+          "key": "right",
+          "value": "Right"
+        }
+      ]
+    },
+    {
+      "format": "SELECT",
+      "name": "positionType",
+      "label": "Position",
+      "defaultValue": "none",
+      "source": [
+        {
+          "key": "none",
+          "value": "none"
+        },
+        {
+          "key": "fixed",
+          "value": "Fixed"
+        },
+        {
+          "key": "absolute",
+          "value": "Absolute"
+        }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "size(%)",
+      "format": "TEXT"
+    },
+    {
+      "name": "Fields",
+      "label": "Fields",
+      "format": "CONTENTPICKER",
+      "itemTypes": ["Fields", "Views", "Widgets"],
+      "allowCreatingGroup": true
+    }
+  ]
+}

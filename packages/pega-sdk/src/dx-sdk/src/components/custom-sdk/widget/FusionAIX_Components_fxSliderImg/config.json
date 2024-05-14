@@ -1,0 +1,158 @@
+{
+  "name": "FusionAIX_Components_fxSliderImg",
+  "label": "fxSliderImg",
+  "description": "fxSliderImg",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxSliderImg",
+  "type": "Widget",
+  "subtype": ["PAGE","CASE"],
+  "icon": "OneColumnPage.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "name": "height",
+      "label": "Height (%)",
+      "format": "NUMBER",
+      "max": 100
+    },
+    {
+      "name": "width",
+      "label": "Width (%)",
+      "format": "NUMBER",
+      "max": 100
+    },
+    {
+      "name": "isNewwindow",
+      "label": "Enable New Window",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "DataPageName",
+      "label": "Data Page Name",
+      "format": "TEXT"
+    },
+    {
+      "name": "numberOfparameters",
+      "label": "Number of Parameters",
+      "format": "SELECT",
+      "defaultValue": "One",
+      "source": [
+        { "key": "One", "value": "One" },
+        { "key": "Two", "value": "Two" },
+        { "key": "Three", "value": "Three" }
+      ]
+    },
+    {
+      "name": "parameter1",
+      "label": "Parameter 1",
+      "format": "GROUP",
+      "visibility": "$this.numberOfparameters = One",
+      "properties": [
+        {
+          "name": "paramslabel1",
+          "label": "Parameter Label 1",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue1",
+          "label": "Parameter Value 1",
+          "format": "PROPERTY"
+        }
+      ]
+    },
+    {
+      "name": "parameter2",
+      "label": "Parameter 2",
+      "format": "GROUP",
+      "visibility": "$this.numberOfparameters = Two",
+      "properties": [
+        {
+          "name": "paramslabel1",
+          "label": "Parameter Label 1",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue1",
+          "label": "Parameter Value 1",
+          "format": "PROPERTY"
+        },
+        {
+          "name": "paramslabel2",
+          "label": "Parameter Label 2",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue2",
+          "label": "Parameter Value 2",
+          "format": "PROPERTY"
+        }
+      ]
+    },
+    {
+      "name": "parameter3",
+      "label": "Parameter 3",
+      "format": "GROUP",
+      "visibility": "$this.numberOfparameters = Three",
+      "properties": [
+        {
+          "name": "paramslabel1",
+          "label": "Parameter Label 1",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue1",
+          "label": "Parameter Value 1",
+          "format": "PROPERTY"
+        },
+        {
+          "name": "paramslabel2",
+          "label": "Parameter Label 2",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue2",
+          "label": "Parameter Value 2",
+          "format": "PROPERTY"
+        },
+        {
+          "name": "paramslabel3",
+          "label": "Parameter Label 3",
+          "format": "TEXT"
+        },
+        {
+          "name": "paramsvalue3",
+          "label": "Parameter Value 3",
+          "format": "PROPERTY"
+        }
+      ]
+    },
+    {
+      "name": "PropertyURL",
+      "label": "URL Property",
+      "format": "TEXT"
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {}
+}

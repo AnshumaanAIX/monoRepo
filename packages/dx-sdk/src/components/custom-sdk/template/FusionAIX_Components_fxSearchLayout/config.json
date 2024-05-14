@@ -1,0 +1,54 @@
+{
+  "name": "FusionAIX_Components_fxSearchLayout",
+  "label": "fxSearchLayout",
+  "description": "fxSearchLayout",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxSearchLayout",
+  "type": "Template",
+  "subtype": "FORM",
+  "icon": "DefaultForm.svg",
+    "properties": [
+    {
+      "format": "SELECT",
+      "name": "NumCols",
+      "label": "Number of columns",
+      "defaultValue": "1",
+      "source": [
+        { "key": "1", "value": "One" },
+        { "key": "2", "value": "Two" },
+        { "key": "3", "value": "Three" }
+      ]
+    },
+    {
+      "format": "SELECT",
+      "name": "templateOverrideMode",
+      "label": "Template for embedded views",
+      "defaultValue": "USE_TEMPLATE",
+      "source": [
+        { "key": "USE_TEMPLATE", "value": "Use template" },
+        { "key": "IGNORE_TEMPLATE", "value": "Ignore template" }
+      ]
+    },
+    {
+      "format": "INSTRUCTIONS"
+    },
+    {
+      "name": "Region A",
+      "label": "Columns",
+      "format": "CONTENTPICKER",
+      "allowCreatingGroup": true,
+      "addTypeList": ["Fields", "Associations"]
+    },
+
+    {
+      "name": "Region B",
+      "label": "Search Fields",
+      "format": "CONTENTPICKER",
+      "allowCreatingGroup": true,
+      "addTypeList": ["Fields"]
+    }
+  ]
+}

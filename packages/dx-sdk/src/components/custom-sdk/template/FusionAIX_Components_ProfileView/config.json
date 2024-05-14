@@ -1,0 +1,49 @@
+{
+  "name": "FusionAIX_Components_ProfileView",
+  "label": "ProfileView",
+  "description": "User Profile",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_ProfileView",
+  "type": "Template",
+  "subtype": "DETAILS",
+  "icon": "OneColumnDetails.svg",
+  "properties": [
+    {
+      "name": "showHighlightedData",
+      "label": "Enable highlighted fields",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "highlightedData",
+      "label": "Highlighted fields",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields"],
+      "visibility": "$this.showHighlightedData = true",
+      "saveToConfig": true
+    },
+    {
+      "name": "A",
+      "label": "Profile Region Section",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "B",
+      "label": "User Detail Section",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "C",
+      "label": "Personal Information Section",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    }
+  ]
+}

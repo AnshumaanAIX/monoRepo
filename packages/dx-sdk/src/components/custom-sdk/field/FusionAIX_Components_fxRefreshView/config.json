@@ -1,0 +1,44 @@
+{
+  "name": "FusionAIX_Components_fxRefreshView",
+  "label": "fxRefreshView",
+  "description": "fxRefreshView",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxRefreshView",
+  "type": "Field",
+  "subtype": "Boolean",
+  "icon": "images/pz-checkbox-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label value",
+      "format": "TEXT"
+    },
+    {
+      "name": "viewName",
+      "label": "viewName",
+      "format": "TEXT"
+    },
+    {
+      "name": "visibility",
+      "label": "Visible",
+      "format": "VISIBILITY"
+    },
+    {
+      "name": "disabled",
+      "label": "Disabled",
+      "format": "DISABLED"
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "format": "REQUIRED"
+    }
+  ],
+  "defaultConfig": {
+    "trueText": "True",
+    "falseText": "False"
+  }
+}

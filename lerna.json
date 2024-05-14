@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "version": "0.0.0",
+  "packages": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start":"lerna run start",
+    "test":"lerna run test",
+    "new-version":"lerna version --conventional-commits --yes",
+    "diff":"lerna diff"
+    }
+}

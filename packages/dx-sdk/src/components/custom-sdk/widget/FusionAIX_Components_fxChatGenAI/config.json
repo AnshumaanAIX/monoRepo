@@ -1,0 +1,41 @@
+{
+  "name": "FusionAIX_Components_fxChatGenAI",
+  "label": "Chat Gen AI",
+  "description": "Chat Gen AI",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxChatGenAI",
+  "type": "Widget",
+  "subtype": ["PAGE","CASE"],
+  "icon": "OneColumnPage.svg",
+  "properties": [
+    {
+      "name": "heading",
+      "label": "Heading",
+      "format": "TEXT"
+    },
+    {
+      "name": "dataPage",
+      "label": "Data Page name",
+      "format": "TEXT"
+    },
+    {
+      "name": "maxHeight",
+      "label": "Maximum height",
+      "format": "TEXT"
+    },
+    {
+      "name": "sendAllUserContext",
+      "label": "Send all user context",
+      "format": "BOOLEAN"
+    }
+  ],
+  "defaultConfig": {
+    "heading": "AI Assistant",
+    "dataPage": "",
+    "maxHeight": "auto",
+    "sendAllUserContext": "true"
+  }
+}

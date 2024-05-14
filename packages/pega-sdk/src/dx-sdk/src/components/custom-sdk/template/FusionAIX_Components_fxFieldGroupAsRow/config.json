@@ -1,0 +1,26 @@
+{
+  "name": "FusionAIX_Components_fxFieldGroupAsRow",
+  "label": "Field Group As Row",
+  "description": "Field Group As Row",
+  "organization": "FusionAIX",
+  "version": "0.0.1",
+  "library": "Components",
+  "allowedApplications": [],
+  "componentKey": "FusionAIX_Components_fxFieldGroupAsRow",
+  "type": "Template",
+  "subtype": "DETAILS",
+  "icon": "OneColumnDetails.svg",
+  "properties": [
+    {
+      "name": "heading",
+      "label": "Label",
+      "format": "TEXT"
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"]
+    }
+  ]
+}
